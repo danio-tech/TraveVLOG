@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../style/styl.css">
+    <link rel="icon" type="image/x-icon" href="../obrazy/Logo.png" />
+    <style>
+        body {
+            background-color: rgb(176, 176, 176);
+        }
+        .transport {
+            margin: 46.5px;
+            width: 80vh;
+            height: 50vh;
+            padding: 3vh;
+            transition: 0.5s;
+            color: whitesmoke;
+            font-size: 150%;
+            margin: 35px;
+        }
+
+        .transport:hover {
+            transform: scale(1.1);
+        }
+        #gora {
+            margin-top: 10vh;
+        }
+        #dol {
+            margin-bottom: 5vh;
+        }
+        #gora,
+        #dol {
+            display: flex;
+            text-align: center;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        #samolot {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../obrazy/transport/samolot.jpg);
+            background-position: 46%;
+            transition: 0.5s;
+        }
+
+        #samolot:hover {
+            background-image: url(../obrazy/transport/samolot.jpg);
+            color: rgb(0, 32, 71);
+        }
+
+        #pociag {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../obrazy/transport/pociag.jpg);
+            background-position: 46%;
+            transition: 0.5s;
+        }
+
+        #pociag:hover {
+            background-image: url(../obrazy/transport/pociag.jpg);
+            color: rgb(0, 32, 71);
+        }
+
+        #auto {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../obrazy/transport/samochod.jpg);
+            background-position: 46%;
+            transition: 0.5s;
+        }
+        a {
+            text-decoration: none;
+            color: whitesmoke;
+            transition: 0.5s;
+        }
+        .transport:hover a {
+            color: rgb(0, 32, 71);
+        }
+        #auto:hover {
+            background-image: url(../obrazy/transport/samochod.jpg);
+            color: rgb(0, 32, 71);
+        }
+
+        #lodz {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../obrazy/transport/lodz.jpg);
+            background-position: 46%;
+            transition: 0.5s;
+        }
+
+        #lodz:hover {
+            background-image: url(../obrazy/transport/lodz.jpg);
+            color: rgb(0, 32, 71);
+        }
+
+        h1 {
+            font-size: 150%;
+        }
+    </style>
+    <title>TraveVLOG - Transport</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul id="navlist">
+            <div id="box">
+                <li class="nav"><a href="../index.html" class="navlink">Strona Główna</a></li>
+                <li class="nav"><a href="biografia.html" class="navlink">O mnie</a></li>
+                <li class="nav"><a href="#nag" class="navlink"><b>Środki transportu</b></a>
+                    <ul class="navlist2">
+                        <li class="nav2"><a href="./transport/samolot.html">Samolot</a></li>
+                        <li class="nav2"><a href="./transport/pociag.html">Pociąg</a></li>
+                        <li class="nav2"><a href="./transport/auto.html">Samochód</a></li>
+                        <li class="nav2"><a href="./transport/statek.html">Statek</a></li>
+                    </ul>
+                </li>
+                <li class="nav"><a href="kraje.html" class="navlink">Kraje, miasta oraz zabytki</a>
+                    <ul class="navlist2">
+                        <li class="nav2"><a href="./kraje/Wlochy.html">Włochy</a>
+                        <li class="nav2"><a href="./kraje/Hiszpania.html">Hiszpania</a></li>
+                        <li class="nav2"><a href="./kraje/Francja.html">Francja</a></li>
+                        <li class="nav2"><a href="./kraje/uk.html">Wielka Brytania</a></li>
+                        <li class="nav2"><a href="./kraje/Turcja.html">Turcja</a></li>
+                    </ul>
+                </li>
+                <li class="nav"><a href="wskazowki.html" class="navlink">Wskazówki</a></li>
+                <li class="nav"><a href="strony.html" class="navlink">Strony, które warto
+                        odwiedzić</a></li>
+                <img src="../obrazy/Logo.png" alt="logo" />
+        </ul>
+        </div>
+    </nav>
+    <main id="glowna">
+            <div id="gora">
+                <div class="transport" id="samolot">
+                    <a href="./transport/samolot.html">
+                    <h2 title="Kliknij, aby zobaczyć więcej">Samolot</h2>
+                    <p>
+                        Podróżowanie samolotem jest popularnym sposobem przemieszczania się na duże odległości,
+                        zapewniającym
+                        szybkość i wygodę. Pasażerowie mogą dotrzeć do odległych miejsc w stosunkowo krótkim czasie, co
+                        pozwala
+                        im wykorzystać więcej czasu na zwiedzanie lub biznes.</p>
+                        </a>
+                </div>
+                <hr>
+                <div class="transport" id="pociag">
+                    <a href="./transport/pociag.html">
+                    <h2 title="Kliknij, aby zobaczyć więcej">Pociąg</h2>
+                    <p>Podróżowanie pociągiem to kolejna bardzo popularna opcja przemieszczania się, zwłaszcza w
+                        obszarach, gdzie sieć
+                        kolejowa jest bardzo dobrze rozwinięta. Pociągi oferują pasażerom możliwość podróży z punktu A
+                        do punktu B,
+                        zapewniając jednocześnie widoki pięknych krajobrazów oraz komfortowe warunki podróży.</p>
+                        </a> <!--  Pociągi są często wybierane
+                przez tych, którzy preferują bardziej relaksujący sposób podróżowania niż np. lot samolotem. Dodatkowo,
+                pociągi mogą być bardziej ekologiczne niż samoloty, co przyciąga świadomych ekologicznie podróżnych.
+                Jednak podróżowanie pociągiem może być czasochłonne, szczególnie na długich trasach, co może być
+                uciążliwe dla tych, którzy poszukują szybszych opcji podróży. Ponadto, niektóre trasy mogą być mniej
+                dogodne w zakresie częstotliwości kursowania pociągów, co może sprawić trudności w planowaniu podróży.
+
+
+            <li>Zalety
+                <ul>
+                    <li>Możliwość podziwiania widoków krajobrazów podczas podróży.</li>
+                    <li>Komfortowe warunki podróży, w tym wygodne siedzenia i przestrzeń do poruszania się.</li>
+                    <li>Potencjalnie bardziej ekologiczne niż podróżowanie samolotem.</li>
+                </ul>
+            </li>
+            <li>Wady
+                <ul>
+                    <li>Czasochłonne podróżowanie, szczególnie na długich trasach.</li>
+                    <li>Mniejsza częstotliwość kursowania pociągów na niektórych trasach.</li>
+                    <li>Brak możliwości szybkiego przemieszczania się na duże odległości, jak w przypadku podróży
+                        samolotem.</li>
+                </ul>
+            </li>
+            </ul>
+            -->
+                </div>
+            </div>
+            <hr>
+            <div>
+                <div id="dol">
+                    <div class="transport" id="auto">
+                        <a href="./transport/auto.html">
+                        <h2 title="Kliknij, aby zobaczyć więcej">Samochód</h2>
+                        <p>
+                            Podróżowanie samochodem to popularna opcja zarówno na krótkie, jak i długie odległości,
+                            dając podróżnym
+                            większą kontrolę nad trasą i czasem podróży. Samochody umożliwiają elastyczność w planowaniu
+                            podróży
+                            oraz możliwość zatrzymywania się w dowolnym momencie. </p> </a><!--  Dla niektórych podróżujących podróż samochodem
+                może być bardziej ekonomiczna, szczególnie jeśli podróżują w grupie. Ponadto, samochód może być bardziej
+                wygodny dla podróżnych, zwłaszcza jeśli podróżują z dużą ilością bagażu lub z rodziną. Jednak
+                podróżowanie samochodem może być stresujące, szczególnie w obszarach z intensywnym ruchem drogowym lub w
+                trudnych warunkach pogodowych. Dodatkowo, podróżowanie samochodem może być czasochłonne, szczególnie na
+                bardzo długich trasach, co może prowadzić do zmęczenia kierowcy i zwiększać ryzyko wypadków drogowych.
+            </p>
+
+            <li>Zalety
+                <ul>
+                    <li>Kontrola nad trasą i czasem podróży.</li>
+                    <li>Elastyczność w planowaniu podróży oraz możliwość zatrzymywania się w dowolnym momencie.</li>
+                    <li>Możliwość ekonomicznego podróżowania, szczególnie w grupie.</li>
+                </ul>
+            </li>
+            <li>Wady
+                <ul>
+                    <li>Stresujące podróżowanie, zwłaszcza w obszarach z intensywnym ruchem drogowym.</li>
+                    <li>Czasochłonność podróży, szczególnie na długich trasach.</li>
+                    <li>Ryzyko zmęczenia kierowcy i zwiększone ryzyko wypadków drogowych.</li>
+                </ul>
+            </li>
+            </ul>
+            -->
+                    </div>
+                    <hr>
+                    <div class="transport" id="lodz">
+                        <a href="./transport/statek.html">
+                        <h2 title="Kliknij, aby zobaczyć więcej">Statek</h2>
+                        <p>Podróżowanie statkiem to unikalny, ale bardzo przyjemny sposób przemieszczania się, który
+                            często kojarzy się z podróżami
+                            morskimi lub rzecznymi. Statki oferują pasażerom możliwość odkrywania odległych miejsc i
+                            eksplorowania
+                            różnych kultur, często w luksusowych i niezwykle komfortowych warunkach. </p></a> <!--  Ponadto, podróżowanie statkiem może być relaksujące,
+                pozwalając podróżnym na cieszenie się widokami morza oraz różnorodnymi atrakcjami dostępnymi na
+                pokładzie. Dla niektórych osób podróżowanie statkiem może być również bardziej ekologiczne niż
+                podróżowanie innymi środkami transportu. Jednak podróżowanie statkiem może być czasochłonne, szczególnie
+                na długich trasach, co może być uciążliwe dla tych, którzy poszukują szybszych opcji podróży. Ponadto,
+                niektóre osoby mogą odczuwać problemy z chorobą morską podczas podróży statkiem, co może ograniczać ich
+                przyjemność podróżowania.</p>
+            <li>Zalety
+                <ul>
+                    <li>Możliwość odkrywania odległych miejsc i różnorodnych kultur.</li>
+                    <li>Relaksująca atmosfera podróży oraz możliwość cieszenia się widokami morza.</li>
+                    <li>Potencjalnie bardziej ekologiczne niż podróżowanie innymi środkami transportu.</li>
+                </ul>
+            </li>
+            <li>Wady
+                <ul>
+                    <li>Czasochłonne podróżowanie, szczególnie na długich trasach.</li>
+                    <li>Możliwość odczuwania problemów z chorobą morską.</li>
+                    <li>Mniejsza elastyczność w planowaniu podróży w porównaniu do innych środków transportu, takich jak samoloty czy samochody.</li>
+                </ul>
+            </li>
+            </ul>
+            -->
+                    </div>
+                </div>
+    </main>
+    <div id="social">
+        <a href="https://www.instagram.com/travel/" target="_blank" title="Odwiedź mojego Instagrama!"><img src="../obrazy/social3.png" alt="instagram"></a>
+        <a href="https://www.facebook.com/daniel.polus.77" target="_blank" title="Odwiedź mojego Facebook'a"><img src="../obrazy/social2.jpg" alt="facebook"></a>
+        <a href="https://www.youtube.com/@MorganVenn" target="_blank" title="Odwiedź mojego YouTube'a"><img src="../obrazy/social1.jpg" alt="youtube"></a> <br>
+    </div>
+    <footer id="stopka">
+        Autor strony: <b>Daniel Polus</b>
+    </footer>
+</body>
+</html>

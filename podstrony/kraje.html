@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../style/styl.css">
+    <link rel="icon" type="image/x-icon" href="../obrazy/Logo.png">
+    <style>
+        body {
+            background-image: url(../obrazy/kraje/tlo.jpg);
+            background-size: cover;
+        }
+
+        #glowna {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 150px;
+            padding: 0;
+        }
+
+        #menu {
+            margin: 100px;
+        }
+
+        #menu a {
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        .guzik {
+            font-size: 315%;
+            border-radius: 7px;
+            height: 150px;
+            width: 700px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            padding: 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .guzik:hover {
+            background-color: #0056b3;
+        }
+
+        .kraj {
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            width: 100%;
+        }
+
+        .kraj .ukryte {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            color: white;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        .kraj:hover .ukryte {
+            transform: translateY(-100%);
+            opacity: 1;
+        }
+
+        .kraj .ukryte i {
+            font-style: italic;
+        }
+
+        #wlochy {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../obrazy/kraje/wlochy.jpg);
+            background-size: cover;
+            background-position: 200%;
+        }
+
+        #hiszpania {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../obrazy/kraje/hiszpania.jpg);
+            background-size: cover;
+            background-position: 150%;
+        }
+
+        #francja {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../obrazy/kraje/francja.jpg);
+            background-size: cover;
+            background-position: 230%;
+        }
+
+        #uk {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../obrazy/kraje/uk.jpg);
+            background-size: cover;
+            background-position: 155%;
+        }
+
+        #turcja {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../obrazy/kraje/turcja.jpg);
+            background-size: cover;
+            background-position: 176%;
+        }
+    </style>
+    <title>TraveVLOG - Kraje</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul id="navlist">
+            <div id="box">
+                <li class="nav"><a href="../index.html" class="navlink">Strona Główna</a></li>
+                <li class="nav"><a href="biografia.html" class="navlink">O mnie</a></li>
+                <li class="nav"><a href="transport.html" class="navlink">Środki transportu</a>
+                    <ul class="navlist2">
+                        <li class="nav2"><a href="./transport/samolot.html">Samolot</a></li>
+                        <li class="nav2"><a href="./transport/pociag.html">Pociąg</a></li>
+                        <li class="nav2"><a href="./transport/auto.html">Samochód</a></li>
+                        <li class="nav2"><a href="./transport/statek.html">Statek</a></li>
+                    </ul>
+                </li>
+                <li class="nav"><a href="#nag" class="navlink"><b>Kraje, miasta oraz zabytki</b></a>
+                    <ul class="navlist2">
+                        <li class="nav2"><a href="./kraje/Wlochy.html">Włochy</a>
+                        <li class="nav2"><a href="./kraje/Hiszpania.html">Hiszpania</a></li>
+                        <li class="nav2"><a href="./kraje/Francja.html">Francja</a></li>
+                        <li class="nav2"><a href="./kraje/uk.html">Wielka Brytania</a></li>
+                        <li class="nav2"><a href="./kraje/Turcja.html">Turcja</a></li>
+                    </ul>
+                </li>
+                <li class="nav"><a href="wskazowki.html" class="navlink">Wskazówki</a></li>
+                <li class="nav"><a href="strony.html" class="navlink">Strony, które warto
+                        odwiedzić</a></li>
+                <img src="../obrazy/Logo.png" alt="logo" />
+        </ul>
+        </div>
+    </nav>
+    <main id="glowna">
+        <div id="menu">
+            <a href="./kraje/Wlochy.html">
+                <div class="kraj">
+                    <button class="guzik" id="wlochy">
+                        Włochy
+                    </button>
+                    <div class="ukryte">
+                        <i>Kraj sztuki, kuchni i pasji, gdzie każdy zgiełk ulicy opowiada własną historię, a każdy
+                            kęs
+                            smakuje jak dzieło sztuki.
+                            To kraj, który przyciąga swoją bogatą historią, zabytkami, ale także niezrównanym stylem
+                            życia, który jest esencją włoskiej kultury. </i>
+                    </div>
+            </a>
+        </div>
+        <div class="kraj">
+            <a href="./kraje/Hiszpania.html">
+                <button class="guzik" id="hiszpania">
+                    Hiszpania
+                </button>
+                <div class="ukryte">
+                    <i>Kraina flamenco, tapas i radosnej fiesty, gdzie każdy krok jest tańcem, a każde spotkanie
+                        przy stole to festiwal smaków i przyjaźni.</i>
+                </div>
+            </a>
+        </div>
+        <div class="kraj">
+            <a href="./kraje/Francja.html">
+                <button class="guzik" id="francja">
+                    Francja
+                </button>
+                <div class="ukryte">
+                    <i>Kraina romantyzmu, kultury i wykwintności, gdzie każdy zakątek jest pełen uroku, a każdy posiłek
+                        jest hołdem dla zmysłów.</i>
+                </div>
+            </a>
+        </div>
+        <div class="kraj">
+            <a href="./kraje/uk.html">
+                <button class="guzik" id="uk">
+                    Wielka Brytania
+                </button>
+                <div class="ukryte">
+                    <i>Zjednoczone królestwo legend, gdzie historia splata się z nowoczesnością, a każdy kąt
+                        skrywa
+                        opowieść o monarchach, literaturze i niezwykłych tradycjach, wzbogaconych aromatem
+                        herbaty i
+                        nutą humoru.</i>
+                </div>
+            </a>
+        </div>
+        <div class="kraj">
+            <a href="./kraje/Turcja.html">
+                <button class="guzik" id="turcja">
+                    Turcja
+                </button>
+                <div class="ukryte">
+                    <i>Most pomiędzy dwoma światami, gdzie wschód spotyka się z zachodem, a starożytność miesza
+                        się
+                        z nowoczesnością. Tutaj minarety otaczają skycrapery, a bazary pulsuje życiem obok
+                        luksusowych butików, tworząc niepowtarzalny miks kultur, smaków i zapachów.</i>
+                </div>
+            </a>
+        </div>
+        </div>
+    </main>
+    <div id="social">
+        <a href="https://www.instagram.com/travel/" target="_blank" title="Odwiedź mojego Instagrama!"><img src="../obrazy/social3.png"
+                alt="instagram"></a>
+        <a href="https://www.facebook.com/daniel.polus.77" target="_blank" title="Odwiedź mojego Facebook'a"><img src="../obrazy/social2.jpg"
+                alt="facebook"></a>
+        <a href="https://www.youtube.com/@MorganVenn" target="_blank" title="Odwiedź mojego YouTube'a"><img src="../obrazy/social1.jpg"
+                alt="youtube"></a> <br>
+    </div>
+    <footer id="stopka">
+        Autor strony: <b>Daniel Polus</b>
+    </footer>
+</body>
+
+</html>

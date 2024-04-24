@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../style/styl.css">
+    <link rel="icon" type="image/x-icon" href="../obrazy/Logo.png">
+    <title>TraveVLOG - Wskazówki</title>
+    <style>
+        #nag {
+            padding-top: 17vh;
+            padding-bottom: 17vh;
+            height: auto;
+            width: 99vw;
+            margin: 0;
+            font-size: 1.5vw;
+            text-align: center;
+            background-image: linear-gradient(to right, #ff9966, #ff5e62, #ff2a68, #e60032);
+        }
+
+        .sekcja {
+            height: auto;
+            width: 90vw;
+            margin: auto auto;
+            margin-top: 14vh;
+            border: 0.2vw outset;
+            padding: 1vw;
+            border-radius: 2vw;
+            cursor: pointer;
+        }
+
+        .sekcja ul,
+        li {
+            list-style-type: none;
+        }
+
+        .sekcja h2 {
+            text-align: center;
+            font-size: 300%;
+        }
+
+        #ogolne {
+            background-image: linear-gradient(to right, #ffaa00, #ff8000, #ff5500, #ff2a00);
+            color: #550e00;
+            border-color: #ff6a00;
+        }
+
+        #ogolne strong {
+            font-size: 150%;
+        }
+
+        #transport {
+            background-image: linear-gradient(to right, #00a8ff, #0097e6, #0085c4, #0073a6);
+            color: #001630;
+            border-color: #00326f;
+        }
+
+        #transport a {
+            color: #001630;
+        }
+
+        #transport,
+        #kraje h3 {
+            font-size: 190%;
+            text-align: center;
+        }
+
+        #transport,
+        #kraje h4 {
+            font-size: 140%;
+        }
+
+        #ogolne_transport,
+        #konkretnie_transport {
+            border: 0.2vw dashed;
+            padding: 0.3vw;
+            border-radius: 1vw;
+            margin: 1vw;
+            font-size: larger;
+        }
+
+        #ogolne_transport {
+            background-image: linear-gradient(to top left, #82a7e3, #6383bf, #4572b9);
+        }
+
+        #konkretnie_transport {
+            background-image: linear-gradient(to bottom right, #82a7e3, #6383bf, #4572b9);
+        }
+
+        .srodki2 {
+            border: 1px solid rgb(73, 73, 206);
+            border-radius: 0.9vw;
+            margin: 1vh;
+            padding: 0.2vw;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(231, 230, 230, 0.2));
+            color: #001636;
+        }
+
+        #samolot {
+            background-position: 10%;
+            background-blend-mode: luminosity;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(231, 230, 230, 0.3)), url(../obrazy/transport/samolot.jpg);
+        }
+
+        #pociag {
+            background-blend-mode: luminosity;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(231, 230, 230, 0.3)), url(../obrazy/transport/pociag.jpg);
+        }
+
+        #samochod {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(231, 230, 230, 0.3)), url(../obrazy/transport/samochod.jpg);
+        }
+
+        #statek {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(231, 230, 230, 0.3)), url(../obrazy/transport/lodz.jpg);
+            background-position: 20%;
+        }
+
+        #kraje {
+            background: linear-gradient(to right, #a8ff78, #78ff78, #55e65c, #2ecc71);
+            border-color: #0d783a;
+            margin-bottom: 6vh;
+            color: #06381b;
+        }
+
+        #kraje a {
+            color: #06381b;
+        }
+
+        #kraje h2 {
+            font-size: 230%
+        }
+
+        #ogolnie_kraje,
+        #kraje_konkretnie {
+            border: 0.2vw dashed #007300;
+            border-radius: 1vw;
+            margin: 1vh;
+            padding: 0.2vw;
+            background-color: #64d868;
+        }
+
+        #ogolnie_kraje ul {
+            border-bottom: 1px solid;
+        }
+
+        .kraj {
+            border: 2px solid;
+            margin: 2.5vh;
+            margin-bottom: 1vh;
+            border-radius: 1.5vw;
+            padding: 0.7vw;
+        }
+
+        #wlochy {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(109, 109, 109, 0.3)), url(../obrazy/kraje/wlochy/nag.jpg);
+            background-position: -20vw;
+        }
+
+        #hiszpania {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(109, 109, 109, 0.3)), url(../obrazy/kraje/hiszpania/nag.jpg);
+            background-position: -60vh;
+        }
+
+        #francja {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(109, 109, 109, 0.3)), url(../obrazy/kraje/francja/nag.jpg);
+            background-position: 40vh;
+        }
+
+        #uk {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(109, 109, 109, 0.3)), url(../obrazy/kraje/uk/nag.jpg);
+            background-position: -15vw;
+        }
+
+        #turcja {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(109, 109, 109, 0.3)), url(../obrazy/kraje/turcja/nag.jpg);
+            background-position: 20vh;
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul id="navlist">
+            <div id="box">
+                <li class="nav"><a href="../index.html" class="navlink">Strona Główna</a></li>
+                <li class="nav"><a href="biografia.html" class="navlink">O mnie</a></li>
+                <li class="nav"><a href="transport.html" class="navlink">Środki transportu</a>
+                    <ul class="navlist2">
+                        <li class="nav2"><a href="./transport/samolot.html">Samolot</a></li>
+                        <li class="nav2"><a href="./transport/pociag.html">Pociąg</a></li>
+                        <li class="nav2"><a href="./transport/auto.html">Samochód</a></li>
+                        <li class="nav2"><a href="./transport/statek.html">Statek</a></li>
+                    </ul>
+                </li>
+                <li class="nav"><a href="kraje.html" class="navlink">Kraje, miasta oraz zabytki</a>
+                    <ul class="navlist2">
+                        <li class="nav2"><a href="./kraje/Wlochy.html">Włochy</a>
+                        <li class="nav2"><a href="./kraje/Hiszpania.html">Hiszpania</a></li>
+                        <li class="nav2"><a href="./kraje/Francja.html">Francja</a></li>
+                        <li class="nav2"><a href="./kraje/uk.html">Wielka Brytania</a></li>
+                        <li class="nav2"><a href="./kraje/Turcja.html">Turcja</a></li>
+                    </ul>
+                </li>
+                <li class="nav"><a href="#nag" class="navlink"><b>Wskazówki</b></a>
+                </li>
+                <li class="nav"><a href="strony.html" class="navlink">Strony, które warto
+                        odwiedzić</a></li>
+                <img src="../obrazy/Logo.png" alt="logo" />
+        </ul>
+        </div>
+    </nav>
+    <header id="nag">
+        <h1>Wskazówki</h1>
+        <p>Tutaj znajdziesz przydatne wskazówki dotyczące podróże <br> różnymi środkami transportu, polecanych krajów na
+            pierwsze wycieczki,
+            jak przygotować się do podróży i wiele więcej.
+        </p>
+    </header>
+    <main id="glowna">
+        <div id="ogolne" class="sekcja">
+            <h2>Ogólne wskazówki na temat podróży</h2>
+            <hr>
+            <p>
+            <ul class="list">
+                <li>
+                    <strong>Planuj z wyprzedzeniem:</strong>
+                    <p>Zawsze warto zaplanować swoją podróż z wyprzedzeniem. Rezerwacja noclegu, biletów lotniczych i
+                        atrakcji może zaoszczędzić wiele stresu i pieniędzy.</p>
+                </li>
+                <hr>
+                <li>
+                    <strong>Bądź otwarty na nowe doświadczenia:</strong>
+                    <p>Podróżowanie to świetna okazja do poznawania nowych kultur, ludzi i zwyczajów. Bądź otwarty na
+                        nowe doświadczenia i gotowy na wyjście ze strefy komfortu.</p>
+                </li>
+                <hr>
+                <li>
+                    <strong>Pamiętaj o bezpieczeństwie:</strong>
+                    <p>Niezależnie od tego, gdzie się wybierasz, pamiętaj o bezpieczeństwie. Zawsze trzymaj oko na
+                        swoich rzeczach, unikaj niebezpiecznych miejsc i korzystaj z rozsądku.</p>
+                </li>
+                <hr>
+                <li>
+                    <strong>Zaplanuj swój budżet:</strong>
+                    <p>Podróżowanie może być drogie, dlatego ważne jest, aby mieć jasny plan finansowy. Określ swój
+                        budżet na noclegi, jedzenie, transport i atrakcje, i staraj się go trzymać.</p>
+                </li>
+                <hr>
+                <li>
+                    <strong>Zbieraj wspomnienia, nie rzeczy:</strong>
+                    <p>Podróżowanie to nie tylko kolekcjonowanie pamiątek, ale także tworzenie niezapomnianych
+                        wspomnień. Skup się na doświadczeniach, a nie na materialnych przedmiotach.</p>
+                </li>
+                <hr>
+                <li>
+                    <strong>Pakuj się mądrze:</strong>
+                    <p>Nie zabieraj ze sobą zbyt wielu rzeczy. Staraj się pakować lekko, biorąc tylko niezbędne
+                        przedmioty. To ułatwi podróżowanie i zmniejszy ryzyko zgubienia rzeczy.</p>
+                </li>
+                <hr>
+                <li>
+                    <strong>Bądź elastyczny:</strong>
+                    <p>Pomimo najlepszych planów podróżnych mogą wystąpić nieprzewidziane sytuacje. Bądź elastyczny i
+                        gotowy na zmiany planów. Czasem najlepsze wspomnienia pochodzą z niespodziewanych sytuacji.</p>
+                </li>
+                <hr>
+                <li>
+                    <strong>Poznaj lokalną kuchnię:</strong>
+                    <p>Jednym z najbardziej ekscytujących aspektów podróżowania jest próbowanie lokalnych potraw. Nie
+                        bój się eksperymentować z jedzeniem i odkrywać nowe smaki.</p>
+                </li>
+                <hr>
+                <li>
+                    <strong>Bądź szanujący wobec kultury i tradycji:</strong>
+                    <p>Podróżując do nowych miejsc, pamiętaj o szacunku dla lokalnej kultury i tradycji. Bądź świadomy
+                        lokalnych zwyczajów i postępuj zgodnie z nimi.</p>
+                </li>
+                <hr>
+                <li>
+                    <strong>Dbaj o środowisko:</strong>
+                    <p>Podróżowanie może mieć negatywny wpływ na środowisko naturalne. Staraj się podróżować
+                        ekologicznie, ograniczając zużycie plastiku, wybierając środki transportu o niskiej emisji, i
+                        respektując lokalne środowisko naturalne.</p>
+                </li>
+            </ul>
+            </p>
+        </div>
+        <div id="transport" class="sekcja">
+            <h2>Wskazówki dotyczące transportu</h2>
+            <div id="ogolne_transport">
+                <h3>Ogólne</h3>
+                <hr>
+                <p>
+                <ul>
+                    <li>
+                        <strong>Wybierz odpowiedni środek transportu:</strong>
+                        <p>Przed podróżą zastanów się, jaki środek transportu będzie najlepszy dla danej trasy i
+                            okoliczności. Czy to samolot, pociąg, autobus, samochód czy może prom? Rozważ zalety i wady
+                            każdego środka transportu, takie jak cena, czas podróży, wygoda i dostępność.</p>
+                    </li>
+                    <hr>
+                    <li>
+                        <strong>Rezerwuj bilety z wyprzedzeniem:</strong>
+                        <p>Aby uniknąć stresu i ewentualnych problemów związanych z brakiem miejsc, zaleca się
+                            rezerwację
+                            biletów transportowych z wyprzedzeniem, zwłaszcza w okresach dużego ruchu turystycznego lub
+                            w
+                            sezonie wakacyjnym.</p>
+                    </li>
+                    <hr>
+                    <li>
+                        <strong>Sprawdź alternatywne opcje transportu:</strong>
+                        <p>Nie zawsze najwygodniejszym i najszybszym sposobem podróżowania jest samolot. Rozważ także
+                            inne
+                            opcje, takie jak pociągi, autobusy czy samochody. Czasami podróż na przykład pociągiem może
+                            być
+                            bardziej malownicza i mniej stresująca.</p>
+                    </li>
+                    <hr>
+                    <li>
+                        <strong>Bądź elastyczny w planowaniu podróży:</strong>
+                        <p>Jeśli to możliwe, bądź elastyczny w wyborze daty i godziny podróży. W niektórych przypadkach
+                            zmiana dnia czy godziny podróży może znacznie obniżyć koszty biletów lub zmniejszyć tłok na
+                            trasie.</p>
+                    </li>
+                    <hr>
+                    <li>
+                        <strong>Pamiętaj o bagażu:</strong>
+                        <p>Upewnij się, że zapoznałeś się z zasadami dotyczącymi bagażu na danym środku transportu.
+                            Sprawdź,
+                            ile możesz zabrać ze sobą bagażu podręcznego i czy istnieją ograniczenia co do wielkości i
+                            wagi
+                            bagażu głównego.</p>
+                    </li>
+                    <hr>
+                    <li>
+                        <strong>Zabezpiecz swoje dokumenty podróży:</strong>
+                        <p>Przed wyjazdem upewnij się, że masz wszystkie niezbędne dokumenty podróży, takie jak
+                            paszport,
+                            wizy, bilet, karty pokładowe itp. Trzymaj je w bezpiecznym miejscu, aby uniknąć ich
+                            zgubienia
+                            lub kradzieży.</p>
+                    </li>
+                    <hr>
+                    <li>
+                        <strong>Przygotuj się na podróż:</strong>
+                        <p>Upewnij się, że masz wszystko, czego potrzebujesz na podróż, takie jak wygodne ubrania,
+                            jedzenie
+                            i napoje na drogę, urządzenia elektroniczne, książki czy magazyny, które umilą Ci czas
+                            podróży.
+                        </p>
+                    </li>
+                    <hr>
+                    <li>
+                        <strong>Bądź świadomy lokalnych zasad i zwyczajów:</strong>
+                        <p>Jeśli podróżujesz do innego kraju, zapoznaj się z lokalnymi zasadami i zwyczajami dotyczącymi
+                            transportu. Na przykład w niektórych krajach obowiązują specjalne przepisy drogowe, które
+                            mogą
+                            się różnić od tych w Twoim kraju.</p>
+                    </li>
+                    <hr>
+                    <li>
+                        <strong>Zachowaj ostrożność:</strong>
+                        <p>Podczas podróży zawsze zachowuj ostrożność i dbaj o swoje bezpieczeństwo. Unikaj podejrzanych
+                            miejsc i osób oraz trzymaj oko na swoje rzeczy, zwłaszcza w miejscach o dużym skupisku
+                            ludzi.
+                        </p>
+                    </li>
+                    <hr>
+                    <li>
+                        <strong>Ciesz się podróżą:</strong>
+                        <p>Pomimo ewentualnych niedogodności podróż może być niezapomnianym doświadczeniem. Ciesz się
+                            widokami, poznawaj nowych ludzi i korzystaj z każdej chwili podróży.</p>
+                    </li>
+                </ul>
+            </div>
+            <div id="konkretnie_transport">
+                <h3>Dotyczące konkretnych środków transportu:</h3>
+                <hr>
+                <div class="srodki">
+                    <a href="./transport/samolot.html" title="Kliknij, aby przejść dalej">
+                        <div class="srodki2" id="samolot">
+                            <hr>
+                            <h4>Samolot</h4>
+                            <hr>
+                            <ul>
+                                <li>
+                                    <strong>Zarezerwuj bilety z wyprzedzeniem:</strong>
+                                    <p>Aby uzyskać najlepsze ceny i miejsca, zarezerwuj bilety lotnicze z wyprzedzeniem,
+                                        zwłaszcza w
+                                        okresach dużego ruchu turystycznego.</p>
+                                </li>
+                                <li>
+                                    <strong>Przygotuj się na kontrolę bezpieczeństwa:</strong>
+                                    <p>Pamiętaj o ograniczeniach dotyczących płynów w bagażu podręcznym i usuń
+                                        przedmioty
+                                        zakazane z
+                                        kabinowego bagażu.</p>
+                                </li>
+                                <li>
+                                    <strong>Przygotuj się na różnice czasowe:</strong>
+                                    <p>Jeśli podróżujesz do innego strefy czasowej, przygotuj się na zmianę czasu, aby
+                                        uniknąć
+                                        jet
+                                        lagu.</p>
+                                </li>
+                                <li>
+                                    <strong>Bądź na lotnisku z wyprzedzeniem:</strong>
+                                    <p>Przyjdź na lotnisko z wyprzedzeniem, aby uniknąć spóźnienia na lot, szczególnie w
+                                        przypadku
+                                        długich kolejek na odprawę.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                    <a href="./transport/pociag.html" title="Kliknij, aby przejść dalej">
+                        <div class="srodki2" id="pociag">
+                            <hr>
+                            <h4>Pociąg
+                            </h4>
+                            <hr>
+                            <ul>
+                                <li>
+                                    <strong>Planuj z wyprzedzeniem:</strong>
+                                    <p>Sprawdź rozkłady jazdy i zarezerwuj bilety z wyprzedzeniem, zwłaszcza w okresach
+                                        dużego
+                                        ruchu
+                                        turystycznego.</p>
+                                </li>
+                                <li>
+                                    <strong>Bądź na czas:</strong>
+                                    <p>Pamiętaj, że pociągi zazwyczaj odjeżdżają i przyjeżdżają zgodnie z rozkładem
+                                        jazdy,
+                                        dlatego
+                                        warto być na stacji z wyprzedzeniem, aby uniknąć spóźnień.</p>
+                                </li>
+                                <li>
+                                    <strong>Przygotuj się na długą podróż:</strong>
+                                    <p>Podróż pociągiem może trwać długo, więc zaplanuj sobie zajęcia, aby umilić sobie
+                                        czas,
+                                        np.
+                                        książki, muzyka, gry planszowe.</p>
+                                </li>
+                                <li>
+                                    <strong>Zachowaj ostrożność:</strong>
+                                    <p>Trzymaj swoje wartościowe rzeczy blisko siebie, zwłaszcza w tłumie na dworcach
+                                        kolejowych,
+                                        aby uniknąć kradzieży.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                    <a href="./transport/auto.html" title="Kliknij, aby przejść dalej">
+                        <div class="srodki2" id="samochod">
+                            <hr>
+                            <h4>Samochód</h4>
+                            <hr>
+                            <ul>
+                                <li>
+                                    <strong>Przestrzegaj przepisów drogowych:</strong>
+                                    <p>Zawsze przestrzegaj limitów prędkości i inne przepisy drogowe, aby zapewnić
+                                        bezpieczeństwo na drodze.</p>
+                                </li>
+                                <li>
+                                    <strong>Zaplanuj trasę:</strong>
+                                    <p>Skorzystaj z aplikacji mapowych, aby znaleźć optymalną trasę i uniknąć korków
+                                        oraz
+                                        opłat drogowych.</p>
+                                </li>
+                                <li>
+                                    <strong>Przerwy na odpoczynek:</strong>
+                                    <p>Planuj regularne przerwy na odpoczynek podczas długiej podróży samochodem, aby
+                                        uniknąć zmęczenia za kierownicą.</p>
+                                </li>
+                                <li>
+                                    <strong>Zapewnij odpowiednie zabezpieczenie bagażu:</strong>
+                                    <p>Upewnij się, że bagaż jest odpowiednio zabezpieczony, aby uniknąć jego
+                                        przemieszczania się podczas jazdy.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                    <a href="./transport/statek.html" title="Kliknij, aby przejść dalej">
+                        <div class="srodki2" id="statek">
+                            <hr>
+                            <h4>Statek</h4>
+                            <hr>
+                            <ul>
+                                <li>
+                                    <strong>Sprawdź rozkłady rejsów:</strong>
+                                    <p>Zapoznaj się z rozkładem rejsów i zarezerwuj bilety z wyprzedzeniem, aby mieć
+                                        pewność, że znajdziesz odpowiedni rejs.</p>
+                                </li>
+                                <li>
+                                    <strong>Przygotuj się na warunki pogodowe:</strong>
+                                    <p>Podróż statkiem może być podatna na zmienne warunki pogodowe, więc przygotuj się
+                                        na
+                                        różne scenariusze.</p>
+                                </li>
+                                <li>
+                                    <strong>Zapewnij leki przeciwwymiotne:</strong>
+                                    <p>Jeśli masz skłonności do choroby morskiej, zapewnij sobie odpowiednie leki
+                                        przeciwwymiotne przed podróżą statkiem.</p>
+                                </li>
+                                <li>
+                                    <strong>Zachowaj ostrożność na pokładzie:</strong>
+                                    <p>Podczas poruszania się po pokładzie statku, zachowaj ostrożność, aby uniknąć
+                                        niepotrzebnych wypadków.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="kraje" class="sekcja">
+            <h2>Wskazówki dotyczące krajów</h2>
+            <hr>
+            <hr>
+            <div id="ogolnie_kraje">
+                <h3>Ogólne</h3>
+                <hr>
+                <h4>Przed podróżą</h4>
+                <ul>
+                    <li>
+                        <strong>Przygotuj odpowiednie dokumenty:</strong>
+                        <p>Sprawdź, czy masz ważny paszport, wizę (jeśli jest wymagana) oraz inne niezbędne dokumenty,
+                            takie jak bilety lotnicze czy ubezpieczenie podróżne.</p>
+                    </li>
+                    <li>
+                        <strong>Sprawdź wymagania wizowe:</strong>
+                        <p>Upewnij się, że znasz wymagania wizowe kraju, do którego podróżujesz, i zadbaj o to, aby
+                            uzyskać odpowiednią wizę przed wyjazdem.</p>
+                    </li>
+                    <li>
+                        <strong>Zapoznaj się z lokalnymi zwyczajami i przepisami:</strong>
+                        <p>Przeczytaj o kulturze, zwyczajach i przepisach panujących w kraju docelowym, aby uniknąć
+                            nieporozumień i nieprzyjemnych sytuacji.</p>
+                    </li>
+                    <li>
+                        <strong>Sprawdź warunki zdrowotne:</strong>
+                        <p>Sprawdź, czy są zalecane szczepienia lub inne środki ostrożności zdrowotnej przed podróżą do
+                            danego kraju.</p>
+                    </li>
+                </ul>
+
+                <h4>Podczas podróży</h4>
+                <ul>
+                    <li>
+                        <strong>Zachowaj ostrożność z dokumentami:</strong>
+                        <p>Trzymaj swoje ważne dokumenty podróży (paszport, bilety, karty kredytowe) w bezpiecznym
+                            miejscu, aby uniknąć ich zgubienia lub kradzieży.</p>
+                    </li>
+                    <li>
+                        <strong>Szanuj lokalną kulturę:</strong>
+                        <p>Staraj się szanować lokalną kulturę, zwyczaje i religię, unikaj zachowań obraźliwych lub
+                            prowokacyjnych.</p>
+                    </li>
+                    <li>
+                        <strong>Pamiętaj o walucie:</strong>
+                        <p>Zapoznaj się z lokalną walutą i pamiętaj o wymianie pieniędzy na miejscową walutę w
+                            odpowiednim miejscu, aby uniknąć problemów z płatnościami.</p>
+                    </li>
+                    <li>
+                        <strong>Bądź świadomy zagrożeń:</strong>
+                        <p>Zapoznaj się z ewentualnymi zagrożeniami dla bezpieczeństwa w danym kraju i zachowuj
+                            ostrożność, unikajc niebezpiecznych miejsc i sytuacji.</p>
+                    </li>
+                </ul>
+
+                <h4>Po powrocie</h4>
+                <ul>
+                    <li>
+                        <strong>Zachowaj wspomnienia:</strong>
+                        <p>Zapisz swoje wrażenia i wspomnienia z podróży, abyś mógł się nimi podzielić z innymi i
+                            zachować je na przyszłość.</p>
+                    </li>
+                    <li>
+                        <strong>Przejrzyj swoje rachunki:</strong>
+                        <p>Sprawdź swoje rachunki bankowe i kart kredytowych po powrocie, aby upewnić się, że nie ma
+                            nieautoryzowanych transakcji.</p>
+                    </li>
+                    <li>
+                        <strong>Podsumuj swoje doświadczenia:</strong>
+                        <p>Przejrzyj swoje doświadczenia z podróży, zastanów się, co poszło dobrze, a co można poprawić,
+                            abyś był jeszcze lepiej przygotowany na przyszłe podróże.</p>
+                    </li>
+                    <li>
+                        <strong>Pamiętaj o fotografii:</strong>
+                        <p>Przejrzyj zdjęcia z podróży i podziel się nimi ze swoimi bliskimi, aby zachować wspomnienia
+                            na długo.</p>
+                    </li>
+                </ul>
+            </div>
+            <div id="kraje_konkretnie">
+                <h3>Kraje do których warto wybrać się w tym roku:</h3>
+                <hr>
+                <a href="./kraje/Wlochy.html" title="Kliknij, aby przejść dalej">
+                    <div class="kraj" id="wlochy">
+                        <h4>Włochy: Odkryj Przepych Historii, Kultury i Kuchni</h4>
+                        <p>Włochy, kraina sztuki, architektury i smaku, to idealny cel podróży dla tych, którzy pragną
+                            doświadczyć wyjątkowej atmosfery starożytnych miast, malowniczych krajobrazów i niezrównanej
+                            kuchni.</p>
+                    </div>
+                </a>
+                <a href="./kraje/Hiszpania.html" title="Kliknij, aby przejść dalej">
+                    <div class="kraj" id="hiszpania">
+                        <h4>Hiszpania: Poczuj Prawdziwą Pasję i Energię Hiszpańskiego Stylu Życia</h4>
+                        <p>Hiszpania zachwyca swoją radością życia, pasją flamenco i niezliczonymi możliwościami
+                            podróżniczymi, od słonecznych plaż po zabytkowe miasta, oferując niezapomniane doznania
+                            każdemu
+                            podróżnikowi.</p>
+                    </div>
+                </a>
+                <a href="./kraje/Francja.html" title="Kliknij, aby przejść dalej">
+                    <div class="kraj" id="francja">
+                        <h4>Francja: Zanurz się w Sztuce, Kulturze i Smażnych Cudach Francuskich Krain</h4>
+                        <p>Francja to kraina romantyzmu, gdzie każdy zmysł znajduje swoje odzwierciedlenie - od
+                            zachwycających muzeów po wyśmienite winnice, zapraszając podróżnych do odkrywania jej
+                            niezrównanego uroku i smaków.</p>
+                    </div>
+                </a>
+                <a href="./kraje/uk.html">
+                    <div class="kraj" id="uk">
+                        <h4>Wielka Brytania: Odkryj Mieszankę Historii, Kultury i Przyrody</h4>
+                        <p>Wielka Brytania to kraj, który łączy w sobie bogatą historię, fascynującą kulturę oraz urocze
+                            krajobrazy. Od majestatycznych zamków po zielone wzgórza Lake District, Brytania zaprasza
+                            podróżnych na niezapomnianą podróż, pełną odkryć i przygód.</p>
+                    </div>
+                </a>
+                <a href="./kraje/Turcja.html">
+                    <div class="kraj" id="turcja">
+                        <h4>Turcja: Zanurz się w Bogactwie Kultury, Tradycji i Przyrody</h4>
+                        <p>Turcja to kraj kontrastów, gdzie wschód spotyka się z Zachodem, a historia miesza się z
+                            nowoczesnością. Od tętniącego życiem Stambułu po oszałamiające krajobrazy Kapadocji, Turcja
+                            zachwyca swoją różnorodnością kulturową, bogactwem dziedzictwa historycznego oraz
+                            niezwykłymi
+                            krajobrazami.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <div id="social">
+        <a href="https://www.instagram.com/travel/" target="_blank" title="Odwiedź mojego Instagrama!"><img src="../obrazy/social3.png"
+                alt="instagram"></a>
+        <a href="https://www.facebook.com/daniel.polus.77" target="_blank" title="Odwiedź mojego Facebook'a"><img src="../obrazy/social2.jpg"
+                alt="facebook"></a>
+        <a href="https://www.youtube.com/@MorganVenn" target="_blank" title="Odwiedź mojego YouTube'a"><img src="../obrazy/social1.jpg"
+                alt="youtube"></a> <br>
+    </div>
+    <footer id="stopka">
+        Autor strony: <b>Daniel Polus</b>
+    </footer>
+</body>
+
+</html>
