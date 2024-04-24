@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./style/styl.css">
+    <link rel="icon" type="image/x-icon" href="./obrazy/Logo.png" />
+    <style>
+        body {
+            background-color: rgb(186, 195, 222);
+            font-stretch: expanded;
+        }
+
+        #nag {
+            height: 110vh;
+            width: 100%;
+            display: block;
+            text-align: center;
+            font-size: 3.5vh;
+            color: white;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('./obrazy/tlo1.gif');
+            border-bottom: 1vh solid rgb(150, 150, 242);
+        }
+
+        #nag img {
+            width: 30vh;
+            height: 30vh;
+            margin-top: 12vh;
+            transition-duration: 0.4s;
+        }
+
+        #nag img:hover {
+            transform: scale(1.3);
+        }
+
+        .sekcje {
+            width: 60%;
+            padding: 6vh;
+            margin: 10vh;
+            display: block;
+            margin-bottom: 5vh;
+            box-shadow: 2vh 2vh 1vh rgb(160, 160, 160);
+            border-radius: 8vh;
+            background-color: aliceblue;
+            transition-duration: 0.3s;
+            border: 1.4vh inset rgb(173, 201, 201);
+        }
+
+        .sekcje:hover {
+            transform: scale(1.05);
+            z-index: 3;
+        }
+
+        .sekcje h3 {
+            font-size: 7vh;
+            color: chocolate;
+        }
+
+        .sekcje a {
+            text-decoration: none;
+            color: rgb(69, 135, 193);
+        }
+
+        .sekcje p {
+            font-size: 3.8889vh;
+            color: darkcyan;
+        }
+
+        .sekcje p::first-letter {
+            font-size: 5.5vh;
+            color: rgb(0, 67, 67);
+        }
+
+        #sek1,
+        #sek3,
+        #sek5 {
+            float: left;
+            margin-left: 2.5vh;
+        }
+
+        #sek2,
+        #sek4 {
+            float: right;
+            margin-right: 2.5vh;
+        }
+
+        #sek5 {
+            margin-bottom: 13vh;
+        }
+
+        .obr {
+            transition-duration: 0.3s;
+            display: block;
+            border: solid #e7e5e5;
+            width: 40vh;
+            height: 40vh;
+            border-radius: 4vh;
+            margin: 8vh;
+        }
+
+        .obr:hover {
+            transform: scale(1.3);
+            z-index: 0;
+        }
+    </style>
+    <title>TraveVLOG</title>
+</head>
+
+<body>
+    <nav id="navbar">
+        <ul id="navlist">
+            <div id="box">
+                <li class="nav"><a href="#nag" class="navlink"><b>Strona Główna</b></a></li>
+                <li class="nav"><a href="./podstrony/biografia.html" class="navlink">O mnie</a></li>
+                <li class="nav"><a href="./podstrony/transport.html" class="navlink">Środki transportu</a>
+                    <ul class="navlist2">
+                        <li class="nav2"><a href="./podstrony/transport/samolot.html">Samolot</a></li>
+                        <li class="nav2"><a href="./podstrony/transport/pociag.html">Pociąg</a></li>
+                        <li class="nav2"><a href="./podstrony/transport/auto.html">Samochód</a></li>
+                        <li class="nav2"><a href="./podstrony/transport/statek.html">Statek</a></li>
+                    </ul>
+                </li>
+                <li class="nav"><a href="./podstrony/kraje.html" class="navlink">Kraje, miasta oraz zabytki</a>
+                    <ul class="navlist2">
+                        <li class="nav2"><a href="./podstrony/kraje/Wlochy.html">Włochy</a>
+                        <li class="nav2"><a href="./podstrony/kraje/Hiszpania.html">Hiszpania</a></li>
+                        <li class="nav2"><a href="./podstrony/kraje/Francja.html">Francja</a></li>
+                        <li class="nav2"><a href="./podstrony/kraje/uk.html">Wielka Brytania</a></li>
+                        <li class="nav2"><a href="./podstrony/kraje/Turcja.html">Turcja</a></li>
+                    </ul>
+                </li>
+                <li class="nav"><a href="./podstrony/wskazowki.html" class="navlink">Wskazówki</a></li>
+                <li class="nav"><a href="./podstrony/strony.html" class="navlink">Strony, które warto
+                        odwiedzić</a></li>
+                <img src="./obrazy/Logo.png" alt="logo" />
+        </ul>
+        </div>
+    </nav>
+    <header id="nag">
+        <a href="./obrazy/Logo.png" target="_blank"><img src="./obrazy/Logo.png" alt="Logo" /></a>
+        <h1>TraveVLOG - rusz w świat!</h1>
+        <div id="nag2">
+            Witaj na moim vlogu podróżniczym! Jestem pasjonatem odkrywania nowych miejsc, kultur i przygód. <br> Na
+            tej stronie internetowej znajdziesz fascynujące relacje z wypraw i wskazówki dla podróżników, <br> dowiesz
+            się
+            jakie kraje warto zwiedzić oraz jakie strony odwiedzić przed podróżą.
+    </header>
+    <main id="glowna">
+        <div id="sek1" class="sekcje">
+            <h3>O mnie</h3>
+            <p>Tak jak już wcześniej wspomniałem jestem pasjonatem odkrywania nowych miejsc, kultur i przygód. Mam na
+                imię Daniel i mam 15 lat. Jak dotąd zwiedziłem 24 różnych krajów i nie planuję szybko kończyć
+                z tymi podróżami.
+                Pierwszy raz za granicą byłem w wieku 7 lat w Niemczech, na zimowe ferie pojechałem razem z moimi
+                rodzicami i
+                siostrą. <br> <br>
+                <a href="./podstrony/biografia.html">Czytaj więcej>>></a>
+            </p>
+
+        </div>
+        <img src="./obrazy/obr1.jpg" alt="zdjecie" class="obr">
+        <img src="./obrazy/obr6.jpg" alt="zdjecie" class="obr">
+        <div id="sek2" class="sekcje">
+            <h3>Środki transportu</h3>
+            <p>Jak dotąd przetestowałem wiele środków transportu. Każdy ma swoje wady, ale też uroki. Ja preferuję loty
+                samolotami, ale
+                dla osób nielubiących dużych wysokości też się coś znajdzie. Na przykład świetnie podróżuje się
+                pociągami.
+                Są też morskie środki transportu, za którymi osobiście nie przepadam, ale wiem, że wiele innych osób je
+                lubi. <br> <br>
+                <a href="./podstrony/transport.html">Czytaj więcej>>></a>
+            </p>
+        </div>
+        <img src="./obrazy/obr2.jpg" alt="zdjecie" class="obr">
+        <img src="./obrazy/obr7.jpg" alt="zdjecie" class="obr">
+        <div id="sek3" class="sekcje">
+            <h3>Kraje, miasta oraz zabytki</h3>
+            <p>Na świecie jest aż 196 państw i czasami ciężko wybrać, do którego się wybrać. Znajdziesz tutaj moje
+                rekomendacje jeśli,
+                dopiero zaczynasz podróżować lub jesteś doświadczonym podróżnikiem i nie wiesz gdzie zaplanować swoją
+                kolejną podróż.
+                Moje ulubione kraje dotąd to: Włochy, Hiszpania (Wyspy Kanaryjskie), Wielka Brytania, Malediwy. <br>
+                <br>
+                <a href="./podstrony/kraje.html">Czytaj więcej>>></a>
+            </p>
+        </div>
+        <img src="./obrazy/obr3.jpg" alt="zdjecie" class="obr">
+        <img src="./obrazy/obr8.jpg" alt="zdjecie" class="obr">
+
+        <div id="sek4" class="sekcje">
+            <h3>Wskazówki</h3>
+            <p>Na tej stronie znajdziesz wiele przydatnych wskazówek dotyczących podróży. Dowiesz się jakie dokumenty
+                zawsze warto przy sobie mieć, jakie wyposażenie wziąć w podróż i co robić w sytuacjach
+                kryzysowych.
+                <br><br>
+                <a href="./podstrony/wskazowki.html">Czytaj więcej>>></a>
+            </p>
+        </div>
+        <img src="./obrazy/obr4.jpg" alt="zdjecie" class="obr">
+        <img src="./obrazy/obr9.jpg" alt="zdjecie" class="obr">
+        <div id="sek5" class="sekcje">
+            <h3>Strony, które warto odwiedzić</h3>
+            <p>W internecie jest wiele przydatnych stron internetowych, które mogą bardzo ułatwić organizowanie podróży.
+                Ale które wybrać? Polecę Ci tutaj kilka stron z których osobiście korzystam do szukania hoteli, środków
+                transportu, ciekawych zabytków.
+                <br><br>
+                <a href="./podstrony/strony.html">Czytaj więcej>>></a>
+            </p>
+        </div>
+        <img src="./obrazy/obr5.jpg" alt="obraz" class="obr">
+        <img src="./obrazy/obr10.jpg" alt="obraz" class="obr">
+        <div id="social">
+            <a href="https://www.instagram.com/travel/" target="_blank" title="Odwiedź mojego Instagrama!"><img src="./obrazy/social3.png"
+                    alt="instagram"></a>
+            <a href="https://www.facebook.com/daniel.polus.77" target="_blank" title="Odwiedź mojego Facebook'a"><img src="./obrazy/social2.jpg"
+                    alt="facebook"></a>
+            <a href="https://www.youtube.com/@MorganVenn" target="_blank" title="Odwiedź mojego YouTube'a"><img src="./obrazy/social1.jpg"
+                    alt="youtube"></a> <br>
+        </div>
+    </main>
+    <footer id="stopka">
+        Autor strony: <b>Daniel Polus</b>
+    </footer>
+</body>
+
+</html>
