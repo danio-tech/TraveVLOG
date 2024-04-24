@@ -84,6 +84,65 @@
         #media p a:hover {
             color: rgb(88, 86, 83);
         }
+        #konkurs {
+            border-radius: 3vw;
+            background-color: coral;
+            text-align: center;
+            width: 80%;
+            margin: 2vh auto;
+            padding: 2vw;
+        }
+        #konkurs h2 {
+            font-size: 250%;
+        }
+        #konkurs h3 {
+            font-size: 200%;
+        }
+        #konkurs input {
+            font-family: 'Comic Sans MS';
+        }
+        #konkurs input[type="text"], #konkurs input[type="number"], #konkurs input[type="tel"], #konkurs input[type="email"] {
+            border-radius: 0.3vw;
+            height: 4vh;
+            margin: 0.1vw;
+            border: 0.2vw solid rgb(151, 48, 10);
+            padding: 0.14vw;
+        }
+        #konkurs textarea {
+            border-radius: 0.3vw;
+            border: 0.2vw solid rgb(151, 48, 10);
+            margin: 0.1vw;
+            font-family: 'Comic Sans MS';
+        }
+        #konkurs input[type="submit"], #konkurs input[type="reset"] {
+            border-radius: 0.4vw;
+            border: none;
+            padding: 1vw;
+            cursor: pointer;
+            margin: 1vw;
+            font-weight: 500;
+            font-size: 105%;
+        }
+        #konkurs input[type="submit"] {
+            background-color: #a3da88;
+            color: #002c0c;
+            transition: 0.1s ease-in;
+        }
+        #konkurs input[type="submit"]:hover {
+            background-color: #658854;
+            color: #3dd666;
+            font-weight: 600;
+        }
+        #konkurs input[type="reset"] {
+            background-color: #d96060;
+            color: #560303;
+            transition: 0.1s ease-in;
+        }
+        #konkurs input[type="reset"]:hover {
+            background-color: #8b4444;
+            color: #f02a2a;
+            font-weight: 600;
+        }
     </style>
 </head>
 
@@ -184,6 +243,7 @@
         </div>
         <div id="konkurs">
             <h2>Konkurs!</h2>
+            <hr>
             <p>
                 <strong>Witajcie podróżnicy!</strong>
                 <br>
@@ -191,27 +251,89 @@
                 Marzysz o spotkaniu inspirującego podróżnika i dzieleniu się swoimi przygodami z kimś, kto podziela
                 Twoją pasję? To świetnie, bo mam dla Ciebie niezwykłą okazję!
                 <br>
+                <hr>
                 <br>
                 Jako doświadczony podróżnik z wieloma niezapomnianymi przeżyciami w tle, ogłaszam
                 konkurs! Wystarczy, że podzielisz się swoją najbardziej ekscytującą podróżniczą historią, zdjęciem z
                 wyprawy lub krótkim filmem, a możesz mieć szansę na spotkanie z mną osobiście!
                 <br>
+                <hr>
                 <br>
                 Nie czekaj dłużej! Podziel się swoimi przygodami z podróży już teraz, aby zdobyć szansę na niezapomniane
                 spotkanie z prawdziwym podróżnikiem.
                 <br>
+                <hr>
                 <br>
                 Ruszaj w świat, zbieraj wspomnienia i może już niedługo będziesz opowiadać swoje historie bezpośrednio
-                przed jednym z najbardziej doświadczonych podróżników!</p>
-                <h3>Formularz zgłoszeniowy</h3>
-                <form action="" method="get">
-                    <div id="form1">
-                        <p>Podaj imię i nazwisko:</p>
-                    <input type="text" name="imie" id="imie" placeholder="Jan Kowalski">
-                    </div>
-                    <input type="submit" onclick="alert('Zgłoszenie zostało wysłane')">
-                </form>
-                <br><br><br><br>
+                przed jednym z najbardziej doświadczonych podróżników!
+                <hr>
+            </p>
+            <h3>Formularz zgłoszeniowy</h3>
+            <form action="" method="get">
+                <p>Podaj imię i nazwisko:
+                    <input type="text" name="imie" id="imie" placeholder="np. Jan Kowalski" required>
+                </p>
+                <p>Podaj wiek:
+                    <input type="number" name="wiek" id="wiek" min="1" max="100" required placeholder="np. 12">
+                </p>
+                <p>Podaj numer telefonu:
+                    <input type="tel" name="tel" id="tel" required placeholder="np. 323 534 123" inputmode="numeric">
+                </p>
+                <p>Podaj swój adres e-mail (opcjonalnie):
+                    <input type="email" name="email" id="email" placeholder="jakkowalski@gmail.com">
+                </p>
+                <p>Płeć: <br>
+                    <input type="radio" name="plec" id="men">Mężczyzna <br>
+                    <input type="radio" name="plec" id="women">Kobieta <br>
+                    <input type="radio" name="plec" id="nic">Nie chcę podawać <br>
+                    <input type="radio" name="plec" id="inna">Inna (jaka): <input type="text" name="plec" id="inna2">
+                </p>
+                <p>
+                    Wyślij swoją pracę:
+                    <input type="file" name="zdjecia" id="zdjecia" required>
+                </p>
+                <p>
+                    Komentarz: <br>
+                    <textarea name="opis" id="" cols="50" rows="10"></textarea>
+                </p>
+                <p>
+                    <input type="checkbox" name="regulamin" id="reg1">
+                    Wyrażam zgodę na przetwarzanie moich danych osobowych w celach związanych z realizacją
+                    usługi/oferty/oferty pracy itp., zgodnie z obowiązującymi przepisami o ochronie danych osobowych.
+                    Przetwarzanie danych obejmuje zbieranie, przechowywanie, wykorzystywanie, analizowanie,
+                    udostępnianie
+                    oraz usuwanie moich danych osobowych w zakresie niezbędnym do realizacji określonych celów.
+                    Oświadczam,
+                    że jestem świadomy/a, iż mam prawo dostępu do moich danych osobowych, ich poprawiania, usuwania oraz
+                    ograniczania przetwarzania, a także prawo do wniesienia skargi do organu nadzorczego.
+                    <br>
+                    <br>
+                    <input type="checkbox" name="regulamin" id="reg2">
+                    Wyrażam zgodę na otrzymywanie informacji handlowych/marketingowych od przedsiębiorstwa TraveVLOG
+                    drogą
+                    elektroniczną/z wykorzystaniem telefonu komórkowego itp., z możliwością rezygnacji z subskrypcji w
+                    każdym czasie. Oświadczam, że mam świadomość, iż moje dane kontaktowe będą wykorzystywane wyłącznie
+                    w celu przesyłania informacji marketingowych oraz że mogę w dowolnym momencie wycofać udzieloną
+                    zgodę, kontaktując się z administratorem danych lub korzystając z opcji rezygnacji dostępnych w
+                    otrzymywanych wiadomościach.
+                    <br>
+                    <br>
+                    <input type="checkbox" name="regulamin" id="reg2">
+                    Wyrażam zgodę na udostępnianie moich danych osobowych partnerom biznesowym/przedstawicielom
+                    handlowym w celu umożliwienia świadczenia usług/ofert/ofert pracy, z zachowaniem odpowiednich
+                    zabezpieczeń i ograniczeń przewidzianych w prawie o ochronie danych osobowych. Oświadczam, że jestem
+                    świadomy/a, iż podmioty odbierające moje dane osobowe mogą znajdować się zarówno w kraju, jak i za
+                    granicą, co może wiązać się z przekazywaniem danych do państw trzecich niezapewniających takiego
+                    samego poziomu ochrony danych, jak moje państwo zamieszkania. Jednakże zobowiązuję się, że będę
+                    przestrzegać wszelkich obowiązujących przepisów dotyczących ochrony danych osobowych i będę
+                    podejmować niezbędne środki ostrożności w celu zapewnienia bezpieczeństwa moich danych osobowych.
+                </p>
+                <p>
+                    <input type="reset" value="Wyczyść">
+                    <input type="submit" onclick="alert('Zgłoszenie zostało wysłane')" value="Wyślij">
+                </p>
+            </form>
+            <br><br><br><br>
         </div>
     </main>
     <div id="social">
