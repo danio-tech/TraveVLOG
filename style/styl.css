@@ -1,0 +1,158 @@
+/* Ogólne style dla całej strony */
+body {
+    font-family: 'Comic Sans MS', 'Franklin Gothic Medium', 'Bahnschrift Light SemiCondensed', 'ADLaM Display', 'HGSGothicE', 'MV Boli', 'Cavolini', 'DJB Miss Liz', 'Lobster';
+    margin: 0;
+    padding: 0;
+}
+
+::selection {
+    background-color: rgb(208, 208, 208);
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Animacja wysunięcia obiektów z góry */
+@keyframes wysuniecie-gora {
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Styl dla paska nawigacji */
+#navbar {
+    background-color: #e8e8e8;
+    top: 0;
+    position: fixed;
+    width: 100vw;
+    box-shadow: 0.5vw 0.4vw 0.2vw rgb(71, 68, 68);
+    z-index: 999;
+    transform: translateY(-100%);
+    animation: wysuniecie-gora 0.5s forwards;
+    height: 11.2vh;
+}
+
+#navbar img {
+    width: 7vh;
+    height: 7vh;
+    margin-left: 2.13vh;
+    margin-bottom: 1vh;
+}
+
+#navbar a:link,
+#navbar a:visited {
+    text-align: center;
+    position: relative;
+    color: black;
+    transition: 0.3s;
+    border-radius: 3px;
+    padding: 1.2vh;
+}
+
+#navbar a:hover {
+    background-color: #b6b3b3;
+    text-decoration: underline;
+}
+
+#navbar,
+#navbar li {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#box {
+    display: flex;
+    justify-content: center;
+}
+
+#navbar li {
+    margin-right: 2.25vh;
+    padding: 1.3vh;
+}
+
+#navbar .nav {
+    position: relative;
+}
+
+#navbar .navlist2 {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.nav2 {
+    border-bottom: 0.139vw solid rgb(45, 45, 45);
+}
+
+#navbar .nav:hover .navlist2 {
+    display: block;
+    background-color: #e8e8e8;
+}
+
+/* Koniec sekcji Nawigacji */
+/* Początek sekcji Stopki */
+@keyframes wysuniecie-dol {
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Styl dla stopki */
+#stopka {
+    bottom: 0;
+    position: fixed;
+    background-color: #e8e8e8;
+    width: 100vw;
+    height: 5vh;
+    text-align: center;
+    line-height: 5vh;
+    z-index: 997;
+    transform: translateY(200%);
+    animation: wysuniecie-dol 0.5s forwards;
+}
+
+/* Koniec sekcji Stopki */
+/*Animacja wysuwania z boku*/
+@keyframes wysuniecie-bok {
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Media społecznościowe */
+#social {
+    height: 19vh;
+    width: 8.75vh;
+    position: fixed;
+    float: left;
+    margin: 1.3vh;
+    bottom: 36vh;
+    z-index: 998;
+    left: 0;
+    transform: translateX(-100%);
+    animation: wysuniecie-bok 0.5s forwards;
+}
+
+#social img {
+    width: 8vh;
+    height: 8vh;
+    border-radius: 100%;
+    transition-duration: 0.13s;
+    object-fit: cover;
+    border: 0.20vw dashed rgba(210, 199, 199, 0.945);
+    margin-bottom: 1.4vh;
+    opacity: 0.6;
+}
+
+#social img:hover {
+    transform: scale(1.2);
+    border: 0.25vw dashed rgb(145, 134, 134);
+    border-radius: 40%;
+    opacity: 1;
+}
+/* Koniec socialów */
