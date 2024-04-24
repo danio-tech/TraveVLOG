@@ -86,14 +86,26 @@
         }
         #konkurs {
             border-radius: 3vw;
-            background-color: coral;
+            background-color: rgb(222, 113, 73);
+            border-color: rgb(155, 67, 36);
+            border: 3px outset;
             text-align: center;
             width: 80%;
             margin: 2vh auto;
             padding: 2vw;
+            margin-bottom: 9h;
         }
         #konkurs h2 {
             font-size: 250%;
+            animation: konkurs 1s ease-in-out infinite;
+        }
+        @keyframes konkurs {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
         }
         #konkurs h3 {
             font-size: 200%;
