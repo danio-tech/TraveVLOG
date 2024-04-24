@@ -1,0 +1,138 @@
+        #nag {
+            text-align: center;
+            color: white;
+            margin-top: 0;
+            background-size: cover;
+            width: 100%;
+            height: 50vh;
+            padding-top: 9vh;
+            border-bottom: 3px solid rgb(135, 203, 135);
+            box-shadow: 7px 3px 8px rgb(170, 167, 167);
+        }
+
+        #nag>h1 {
+            font-size: 400%;
+        }
+
+        #nag>p {
+            font-size: 140%;
+            padding: 11px;
+        }
+
+        #nag>p::first-letter {
+            font-size: 120%;
+            font-weight: bolder;
+        }
+
+        #info {
+            padding: 1%;
+            margin: 0;
+            width: 97%;
+        }
+
+        .notka {
+            width: 90%;
+            height: 46%;
+            margin: 45px auto;
+            z-index: 15;
+            font-size: 150%;
+            border-radius: 9px;
+            box-shadow: 7px 5px 7px rgba(97, 97, 104, 0.785);
+            cursor: pointer;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+            text-align: center;
+            opacity: 0.9;
+            object-fit: cover;
+        }
+
+        .notka img {
+            margin: 0;
+            padding: 0;
+            width: 50%;
+            height: 30%;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+            border-radius: 6px;
+            object-fit: cover;
+        }
+
+        .notka:hover {
+            transform: scale(1.05);
+            z-index: 10;
+            height: 50%;
+            opacity: 1;
+            padding: 0;
+            font-size: 155%;
+        }
+
+        .notka:hover img {
+            width: 70%;
+        }
+
+        .notka::first-line {
+            font-size: 115%;
+            font-weight: bolder;
+        }
+
+
+        #miasta {
+            padding: 20px;
+        }
+
+        #miasta h2 {
+            font-size: 210%;
+        }
+
+        .miasto {
+            margin-top: 20px;
+            margin-left: 14px;
+            margin-bottom: 40px;
+            background-color: #f7f7f7;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition-duration: 0.4s;
+            transition-timing-function: ease;
+            width: 95%;
+            cursor: pointer;
+        }
+        .miasto:hover {
+            transform: scale(1.04);
+        }
+        .miasto h3 {
+            font-size: 20px;
+            color: rgb(7, 9, 74);
+            margin-bottom: 10px;
+        }
+
+        .miasto p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: rgb(50, 50, 50);
+        }
+        .zdjecia {
+            height: 50%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .zdjecia img {
+            width: 30%;
+            height: 200px;
+            margin: 0 12px;
+            object-fit: cover;
+            transition: 0.3s;
+            transition-delay: 0.3;
+            border-radius: 6px;
+            border: 1px dashed grey;
+        }
+        .zdjecia img:hover {
+            transform: scale(1.07);
+            z-index: 40;
+            height: 250px;
+            border: 2px dashed gray;
+        }

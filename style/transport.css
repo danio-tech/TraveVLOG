@@ -1,0 +1,80 @@
+body {
+    background-color: rgb(237, 237, 237);
+    margin: 0;
+    padding: 0;
+}
+
+#nag {
+    background-size: cover;
+    font-size: 4vw;
+    text-align: center;
+    margin-top: 7vh;
+    width: 100%;
+    height: 45vh;
+    line-height: 45vh;
+    color: rgb(88, 3, 3);
+    border-bottom: 0.1vw solid rgb(197, 44, 44);
+    box-shadow: 0.257vw 0 0.772vw rgb(105, 105, 105);
+}
+
+.inf {
+    margin: 3vh;
+    font-size: 2.3vw;
+}
+
+.inf h2 {
+    color: chocolate;
+}
+
+#plusy {
+    color: green;
+}
+
+#minusy {
+    color: red;
+}
+
+li {
+    margin-bottom: 2.5vh;
+}
+
+#galeria {
+    display: flex;
+}
+
+.zdj {
+    width: 16vw;
+    height: 50vh;
+    border: 0.077vw inset rgb(104, 104, 104);
+    font-size: 1vw;
+    margin:4.5vh;
+    margin-right: 6vw;
+    text-align: center;
+    transition: 0.4s;
+    padding: 0.6vw;
+    box-shadow: 0.103vw 0.18vw 0.128vw rgb(83, 83, 83);
+    overflow: hidden;
+    border-radius: 0.18vw;
+    background-color: rgb(211, 211, 211);
+    border: none;
+    margin-bottom: 9vh;
+}
+
+.zdj:hover {
+    border: 0.2vw outset rgb(122, 122, 122);
+    transform: scale(1.25);
+    font-weight: 600;
+    width: 18vw;
+    padding: 0;
+    height: 50vh;
+    background-color: rgb(243, 243, 243);
+    z-index: 15;
+}
+
+.zdj img {
+    width: 100%;
+    height: 17.4vh;
+    object-fit: cover;
+    border-radius: 0.18vw;
+    margin-bottom: 3vh;
+}
