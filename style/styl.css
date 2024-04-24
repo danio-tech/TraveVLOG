@@ -14,6 +14,52 @@ a {
     text-decoration: none;
 }
 
+@keyframes logo {
+    0% {
+        transform: rotate(0);
+    }
+
+    10% {
+        transform: rotate(36deg);
+    }
+
+    20% {
+        transform: rotate(72deg);
+    }
+
+    30% {
+        transform: rotate(108deg);
+    }
+
+    40% {
+        transform: rotate(144deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    60% {
+        transform: rotate(216deg);
+    }
+
+    70% {
+        transform: rotate(252deg);
+    }
+
+    80% {
+        transform: rotate(288deg);
+    }
+
+    90% {
+        transform: rotate(324deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* Animacja wysunięcia obiektów z góry */
 @keyframes wysuniecie-gora {
     to {
@@ -41,6 +87,14 @@ a {
     margin-bottom: 1vh;
 }
 
+#navbar img:hover {
+    animation-name: logo;
+    animation-duration: 1.4s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+}
+
+
 #navbar a:link,
 #navbar a:visited {
     text-align: center;
@@ -49,6 +103,7 @@ a {
     transition: 0.3s;
     border-radius: 3px;
     padding: 1.2vh;
+    text-decoration: none;
 }
 
 #navbar a:hover {
@@ -116,6 +171,11 @@ a {
     animation: wysuniecie-dol 0.5s forwards;
 }
 
+#stopka a {
+    text-decoration: none;
+    color: goldenrod;
+}
+
 /* Koniec sekcji Stopki */
 /*Animacja wysuwania z boku*/
 @keyframes wysuniecie-bok {
@@ -141,7 +201,7 @@ a {
 #social img {
     width: 8vh;
     height: 8vh;
-    border-radius: 100%;
+    border-radius: 40%;
     transition-duration: 0.13s;
     object-fit: cover;
     border: 0.20vw dashed rgba(210, 199, 199, 0.945);
@@ -152,7 +212,9 @@ a {
 #social img:hover {
     transform: scale(1.2);
     border: 0.25vw dashed rgb(145, 134, 134);
-    border-radius: 40%;
+    border-radius: 20%;
     opacity: 1;
 }
+
+
 /* Koniec socialów */
